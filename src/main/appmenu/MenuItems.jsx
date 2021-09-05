@@ -40,7 +40,7 @@ const MenuItems = () => {
                 <ListItemIcon>
                     <AccessIcon/>
                 </ListItemIcon>
-                <ListItemText primary="Aksesspakker"/>
+                <ListItemText primary="Tilgangspakker"/>
             </ListItem>
             <ListItem button component={Link} to="/tools">
                 <ListItemIcon>
