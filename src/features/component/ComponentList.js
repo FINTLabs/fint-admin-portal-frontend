@@ -37,10 +37,7 @@ const styles = theme => ({
     },
     addIcon: {
         color: theme.palette.secondary.dark,
-    },
-    removeIcon: {
-        color: theme.palette.primary.light,
-    },
+    }
 });
 
 class ComponentList extends Component {
@@ -145,7 +142,7 @@ class ComponentList extends Component {
                                 <ListItemSecondaryAction>
                                     <IconButton aria-label="Remove"
                                                 onClick={() => this.askToRemoveComponent(component)}>
-                                        <RemoveIcon className={classes.removeIcon}/>
+                                        <RemoveIcon/>
                                     </IconButton>
                                     <IconButton aria-label="Settings" onClick={() => this.showComponent(component)}>
                                         <SettingsIcon/>

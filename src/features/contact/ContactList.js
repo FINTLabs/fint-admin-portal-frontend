@@ -31,10 +31,7 @@ const styles = (theme) => ({
     itemAvatar: {
         color: '#fff',
         backgroundColor: theme.palette.secondary.main,
-    },
-    removeIcon: {
-        color: theme.palette.primary.light,
-    },
+    }
 });
 
 class ContactList extends React.Component {
@@ -123,7 +120,7 @@ class ContactList extends React.Component {
                                 />
                                 <ListItemSecondaryAction>
                                     <IconButton aria-label="Remove" onClick={() => this.askToRemoveContact(contact)}>
-                                        <RemoveIcon className={classes.removeIcon}/>
+                                        <RemoveIcon/>
                                     </IconButton>
                                     <IconButton aria-label="Settings" onClick={() => this.showContactView(contact)}>
                                         <SettingsIcon/>

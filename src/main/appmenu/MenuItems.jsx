@@ -7,60 +7,49 @@ import ComponentIcon from "@material-ui/icons/WebAsset";
 import AccessIcon from "@material-ui/icons/LockOpen";
 import ToolsIcon from "@material-ui/icons/Build";
 import {Link} from "react-router-dom";
+import List from "@material-ui/core/List";
 
-const menuLink = {
-    textDecoration: 'none'
-};
-
-export const MENU_ITEMS = (
-    <div>
-        <Link to="/" style={menuLink}>
-            <ListItem button>
+const MenuItems = () => {
+    return (
+        <List id="menuList">
+            <ListItem button component={Link} to="/">
                 <ListItemIcon>
                     <DashboardIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Dashboard"/>
             </ListItem>
-        </Link>
-        <Link to="/organisations" style={menuLink}>
-            <ListItem button>
+            <ListItem button component={Link} to="/organisations">
                 <ListItemIcon>
                     <BusinessIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Organisasjoner"/>
             </ListItem>
-        </Link>
-        <Link to="/contacts" style={menuLink}>
-            <ListItem button>
+            <ListItem button component={Link} to="/contacts">
                 <ListItemIcon>
                     <ContactIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Kontakter"/>
             </ListItem>
-        </Link>
-        <Link to="/components" style={menuLink}>
-            <ListItem button>
+            <ListItem button component={Link} to="/components">
                 <ListItemIcon>
                     <ComponentIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Komponenter"/>
             </ListItem>
-        </Link>
-        <Link to="/access" style={menuLink}>
-            <ListItem button>
+            <ListItem button component={Link} to="/access">
                 <ListItemIcon>
                     <AccessIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Aksesspakker"/>
             </ListItem>
-        </Link>
-        <Link to="/tools" style={menuLink}>
-            <ListItem button>
+            <ListItem button component={Link} to="/tools">
                 <ListItemIcon>
                     <ToolsIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Verktøy"/>
             </ListItem>
-        </Link>
-    </div>
-);
+        </List>
+    );
+}
+
+export default MenuItems;
