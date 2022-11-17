@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 import {
   Avatar,
   Dialog,
@@ -13,13 +13,13 @@ import {
   ListItemAvatar,
   ListItemSecondaryAction,
   ListItemText,
-  withStyles,
-} from "@material-ui/core";
-import ContactIcon from "@material-ui/icons/Person";
-import AddIconCircle from "@material-ui/icons/AddCircle";
-import RemoveIcon from "@material-ui/icons/RemoveCircle";
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import ContactIcon from "@mui/icons-material/Person";
+import AddIconCircle from "@mui/icons-material/AddCircle";
+import RemoveIcon from "@mui/icons-material/RemoveCircle";
 import OrganisationApi from "../../../data/api/OrganisationApi";
-import LegalContactIcon from "@material-ui/icons/AccountBalance"
+import LegalContactIcon from "@mui/icons-material/AccountBalance"
 import InformationMessageBox from "../../../common/InformationMessageBox";
 import PropTypes from "prop-types";
 import {withContext} from "../../../data/context/withContext";
@@ -255,8 +255,11 @@ class OrganisationAddLegalContact extends React.Component {
                       secondary={this.state.currentLegalContact.lastName}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton color="secondary" aria-label="Add"
-                                  onClick={() => this.askToRemoveLegalContact(this.state.currentLegalContact)}>
+                      <IconButton
+                        color="secondary"
+                        aria-label="Add"
+                        onClick={() => this.askToRemoveLegalContact(this.state.currentLegalContact)}
+                        size="large">
                         <RemoveIcon className={classes.removeIcon}/>
                       </IconButton>
                     </ListItemSecondaryAction>
@@ -281,8 +284,11 @@ class OrganisationAddLegalContact extends React.Component {
                       secondary={contact.lastName}
                     />
                     <ListItemSecondaryAction>
-                      <IconButton color="secondary" aria-label="Add"
-                                  onClick={() => this.askToAddContact(contact)}>
+                      <IconButton
+                        color="secondary"
+                        aria-label="Add"
+                        onClick={() => this.askToAddContact(contact)}
+                        size="large">
                         <AddIconCircle/>
                       </IconButton>
                     </ListItemSecondaryAction>
@@ -298,7 +304,7 @@ class OrganisationAddLegalContact extends React.Component {
           </DialogActions>
         </Dialog>
       </div>
-    )
+    );
   }
 }
 

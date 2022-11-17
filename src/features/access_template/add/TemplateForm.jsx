@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@material-ui/core";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@mui/material";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 import {useDispatch} from "react-redux";
 import AccessTemplateApi from "../../../data/api/AccessTemplateApi";
 import {fetchAccessTemplates} from "../../../data/redux/dispatchers/access_template";

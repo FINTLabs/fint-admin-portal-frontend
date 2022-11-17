@@ -1,12 +1,20 @@
 import React, {Component} from "react";
 import {
-    Avatar, Divider, IconButton, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, Typography,
-    withStyles
-} from "@material-ui/core";
-import SettingsIcon from "@material-ui/icons/Settings";
-import RemoveIcon from "@material-ui/icons/RemoveCircle";
-import ComponentIcon from "@material-ui/icons/WebAsset";
-import StarIcon from "@material-ui/icons/Star";
+    Avatar,
+    Divider,
+    IconButton,
+    List,
+    ListItem,
+    ListItemAvatar,
+    ListItemSecondaryAction,
+    ListItemText,
+    Typography,
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import SettingsIcon from "@mui/icons-material/Settings";
+import RemoveIcon from "@mui/icons-material/RemoveCircle";
+import ComponentIcon from "@mui/icons-material/WebAsset";
+import StarIcon from "@mui/icons-material/Star";
 import AutoHideNotification from "../../common/AutoHideNotification";
 import PropTypes from "prop-types";
 import ComponentsView from "./view/ComponentsView";
@@ -148,11 +156,16 @@ class ComponentList extends Component {
                                     secondary={component.basePath}
                                 />
                                 <ListItemSecondaryAction>
-                                    <IconButton aria-label="Remove"
-                                                onClick={() => this.askToRemoveComponent(component)}>
+                                    <IconButton
+                                        aria-label="Remove"
+                                        onClick={() => this.askToRemoveComponent(component)}
+                                        size="large">
                                         <RemoveIcon className={classes.removeIcon}/>
                                     </IconButton>
-                                    <IconButton aria-label="Settings" onClick={() => this.showComponent(component)}>
+                                    <IconButton
+                                        aria-label="Settings"
+                                        onClick={() => this.showComponent(component)}
+                                        size="large">
                                         <SettingsIcon/>
                                     </IconButton>
                                 </ListItemSecondaryAction>
@@ -161,7 +174,6 @@ class ComponentList extends Component {
                     </List>
                 </div>
             </div>
-
         );
     }
 }

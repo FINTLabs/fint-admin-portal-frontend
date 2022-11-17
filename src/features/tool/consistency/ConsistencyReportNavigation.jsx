@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { withStyles, Grid, Link, CircularProgress } from "@material-ui/core";
+import { Grid, Link, CircularProgress } from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
 import { PropTypes } from "prop-types";
-import FinishedIcon from "@material-ui/icons/Stop";
+import FinishedIcon from "@mui/icons-material/Stop";
 import Model from "./Model";
 
 const styles = theme => ({

@@ -1,18 +1,18 @@
 import React, {Component} from "react";
 import {
   Avatar,
-  Button, 
-  Dialog, 
-  DialogActions, 
-  DialogContent, 
-  DialogTitle,   
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   List,
   ListItem,
   ListItemAvatar,
   ListItemText,
-  withStyles,
-} from "@material-ui/core";
-import ContactIcon from "@material-ui/icons/Person";
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import ContactIcon from "@mui/icons-material/Person";
 import PropTypes from "prop-types";
 import Sort from "../../../common/utils/Sort";
 

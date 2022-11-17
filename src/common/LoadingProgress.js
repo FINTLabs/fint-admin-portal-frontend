@@ -1,9 +1,11 @@
 import React from "react";
-import {CircularProgress, withStyles} from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
+
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
   progress: {
-    margin: `0 ${theme.spacing(2)}px`,
+    margin: `0 ${theme.spacing(2)}`,
     position: 'absolute',
     top: '30%',
     left: '50%',

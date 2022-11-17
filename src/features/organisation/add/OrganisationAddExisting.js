@@ -1,12 +1,23 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 import {
-    Avatar, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Input, List, ListItem, ListItemAvatar,
-    ListItemSecondaryAction, ListItemText, withStyles,
-} from "@material-ui/core";
-import {Add} from "@material-ui/icons";
-import BusinessIcon from "@material-ui/icons/Business";
-import AddIconCircle from "@material-ui/icons/AddCircle";
+    Avatar,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    IconButton,
+    Input,
+    List,
+    ListItem,
+    ListItemAvatar,
+    ListItemSecondaryAction,
+    ListItemText,
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import {Add} from "@mui/icons-material";
+import BusinessIcon from "@mui/icons-material/Business";
+import AddIconCircle from "@mui/icons-material/AddCircle";
 import OrganisationApi from "../../../data/api/OrganisationApi";
 import InformationMessageBox from "../../../common/InformationMessageBox";
 import PropTypes from "prop-types";
@@ -44,7 +55,7 @@ const styles = (theme) => ({
     },
 
     searchInput: {
-        margin: theme.spacing(1)
+        margin: theme.spacing(1),
         width: '80%',
     },
 
@@ -189,8 +200,11 @@ class OrganisationAddExisting extends React.Component {
                                             secondary={organisation.name}
                                         />
                                         <ListItemSecondaryAction>
-                                            <IconButton color="secondary" aria-label="Add"
-                                                        onClick={() => this.askToAddOrganisation(organisation)}>
+                                            <IconButton
+                                                color="secondary"
+                                                aria-label="Add"
+                                                onClick={() => this.askToAddOrganisation(organisation)}
+                                                size="large">
                                                 <AddIconCircle/>
                                             </IconButton>
                                         </ListItemSecondaryAction>
@@ -206,7 +220,7 @@ class OrganisationAddExisting extends React.Component {
                     </DialogActions>
                 </Dialog>
             </div>
-        )
+        );
     }
 }
 

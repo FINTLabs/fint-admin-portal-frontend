@@ -1,13 +1,13 @@
 import React from "react";
-import {ListItem, ListItemIcon, ListItemText} from "@material-ui/core";
-import DashboardIcon from "@material-ui/icons/Dashboard";
-import BusinessIcon from "@material-ui/icons/Business";
-import ContactIcon from "@material-ui/icons/Person";
-import ComponentIcon from "@material-ui/icons/WebAsset";
-import AccessIcon from "@material-ui/icons/LockOpen";
-import ToolsIcon from "@material-ui/icons/Build";
+import {ListItem, ListItemIcon, ListItemText} from "@mui/material";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import BusinessIcon from "@mui/icons-material/Business";
+import ContactIcon from "@mui/icons-material/Person";
+import ComponentIcon from "@mui/icons-material/WebAsset";
+import AccessIcon from "@mui/icons-material/LockOpen";
+import ToolsIcon from "@mui/icons-material/Build";
 import {Link} from "react-router-dom";
-import List from "@material-ui/core/List";
+import List from "@mui/material/List";
 
 const MenuItems = () => {
     return (

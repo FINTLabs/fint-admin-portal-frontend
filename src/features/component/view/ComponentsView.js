@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 import {
   Dialog,
   DialogActions,
@@ -10,11 +10,11 @@ import {
   TableCell,
   TableRow,
   TextField,
-  withStyles
-} from "@material-ui/core";
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
 import PropTypes from "prop-types";
 import ComponentApi from "../../../data/api/ComponentApi";
-import Checkbox from "@material-ui/core/Checkbox";
+import Checkbox from "@mui/material/Checkbox";
 
 const styles = theme => ({
   dialogTitle: {

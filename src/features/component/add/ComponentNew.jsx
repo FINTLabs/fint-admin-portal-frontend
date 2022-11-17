@@ -6,19 +6,19 @@ import {
   DialogContent,
   DialogTitle,
   TextField,
-  withStyles,
   Typography,
   Divider,
   Box,
-  Fab
-} from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
+  Fab,
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import AddIcon from "@mui/icons-material/Add";
 import ComponentApi from "../../../data/api/ComponentApi";
 import PropTypes from "prop-types";
 import NameValidationInput from "../../../common/NameValidationInput";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import FormGroup from "@mui/material/FormGroup";
 
 const styles = theme => ({
   createComponentButton: {
@@ -157,7 +157,7 @@ class ComponentNew extends Component {
               onChange={this.updateComponentState}
             />
 
-            <Box p={3} marginTop={6} borderRadius={5} border={1} borderColor="grey.500">
+            <Box p={3} marginTop={6} borderRadius="5px" border={1} borderColor="grey.500">
               <Typography variant="subtitle1">Type</Typography>
               <Divider />
               <FormGroup row>

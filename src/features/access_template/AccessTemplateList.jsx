@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAccessTemplates} from "../../data/redux/dispatchers/access_template";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import List from "@material-ui/core/List";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import List from "@mui/material/List";
 import WarningMessageBox from "../../common/WarningMessageBox";
-import {makeStyles} from "@material-ui/core/styles";
+import makeStyles from '@mui/styles/makeStyles';
 import AccessPackageListItem from "./AccessPackageTemplateListItem";
 import AccessTemplateApi from "../../data/api/AccessTemplateApi";
 import SavedSuccessSnackbar from "../../common/SavedSuccessSnackbar";

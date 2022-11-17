@@ -1,7 +1,7 @@
 import React from 'react';
-import {Avatar, IconButton, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText} from "@material-ui/core";
-import {Delete, Edit} from "@material-ui/icons";
-import LockIcon from "@material-ui/icons/Lock";
+import {Avatar, IconButton, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText} from "@mui/material";
+import {Delete, Edit} from "@mui/icons-material";
+import LockIcon from "@mui/icons-material/Lock";
 
 const AccessPackageListItem = (props) => {
     const {classes, accessPackage, openEdit, openDeleteAccessPackageDialog} = props;
@@ -21,13 +21,13 @@ const AccessPackageListItem = (props) => {
                 <IconButton
                     aria-label="Edit"
                     onClick={() => openEdit(accessPackage.dn, accessPackage)}
-                >
+                    size="large">
                     <Edit/>
                 </IconButton>
                 <IconButton
                     aria-label="Delete"
                     onClick={() => openDeleteAccessPackageDialog(accessPackage)}
-                >
+                    size="large">
                     <Delete/>
                 </IconButton>
             </ListItemSecondaryAction>

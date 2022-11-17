@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
-import Dialog from "@material-ui/core/Dialog";
-import {makeStyles} from "@material-ui/core/styles";
-import {Fab} from "@material-ui/core";
-import {Add} from "@material-ui/icons";
+import Dialog from "@mui/material/Dialog";
+import makeStyles from '@mui/styles/makeStyles';
+import {Fab} from "@mui/material";
+import {Add} from "@mui/icons-material";
 import {useDispatch, useSelector} from "react-redux";
-import Divider from "@material-ui/core/Divider";
+import Divider from "@mui/material/Divider";
 import EntitySelection from "./EntitySelection";
 import EditAccessPackageAppBar from "./EditAccessPackageTemplateAppBar";
 import EditAccessPackageDialog from "./EditAccessPackageTemplateDialog";
 import ConfirmAccessPackageUpdate from "./ConfirmAccessPackageTemplateUpdate";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogActions from "@material-ui/core/DialogActions";
-import Button from "@material-ui/core/Button";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogActions from "@mui/material/DialogActions";
+import Button from "@mui/material/Button";
 import {updateAccessPackages} from "../../../data/redux/actions/access_templates";
 
 const useStyles = makeStyles(theme => ({
