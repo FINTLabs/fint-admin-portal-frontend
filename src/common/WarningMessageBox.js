@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,} from "@material-ui/core";
+import Button from "@mui/material/Button";
+import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,} from "@mui/material";
 import PropTypes from "prop-types";
-import WarningIcon from "@material-ui/icons/Warning";
-import {withStyles} from "@material-ui/core";
+import WarningIcon from "@mui/icons-material/Warning";
+import withStyles from '@mui/styles/withStyles';
 
 
 const styles = (theme) => ({

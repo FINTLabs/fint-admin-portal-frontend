@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {blue} from "@material-ui/core/colors/index";
+import {blue} from "@mui/material/colors/index";
 import React from "react";
 import WarningMessageBox from "../../common/WarningMessageBox";
 import {
@@ -12,14 +12,14 @@ import {
   ListItemSecondaryAction,
   ListItemText,
   Typography,
-  withStyles
-} from "@material-ui/core";
-import BusinessIcon from '@material-ui/icons/Business';
-import PersonIcon from '@material-ui/icons/Person';
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import BusinessIcon from '@mui/icons-material/Business';
+import PersonIcon from '@mui/icons-material/Person';
 import {withContext} from "../../data/context/withContext";
-import RemoveIcon from "@material-ui/icons/RemoveCircle";
-import SettingsIcon from "@material-ui/icons/Settings";
-import AccountBalanceIcon from "@material-ui/icons/AccountBalance"
+import RemoveIcon from "@mui/icons-material/RemoveCircle";
+import SettingsIcon from "@mui/icons-material/Settings";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance"
 import OrganisationView from "./view/OrganisationView";
 import OrganisationContacts from "./view/OrganisationContacts";
 import OrganisationApi from "../../data/api/OrganisationApi";
@@ -164,67 +164,75 @@ getPrimaryAssetId = (organisation) => {
       const organisations = this.props.organisations.sort(Sort.alphabetically);
 
       return (
-      <div className={classes.root}>
-        <WarningMessageBox
-          show={this.state.askToRemoveOrganisation}
-          message={this.state.message}
-          onClose={this.onCloseRemoveOrganisation}
-        />
-        <OrganisationAddLegalContact
-          notify={this.props.notify}
-          fetchContacts={this.props.fetchContacts}
-          contacts={this.props.contacts}
-          onClose={this.onCloseAddLegalContact}
-          currentLegalContact={this.state.currentLegalContact}
-          refreshLegalContact={this.refreshLegalContact}
-          organisation={this.state.organisation}
-          show={this.state.showAddLegalContactDialog}
-        />
-        <OrganisationView
-          organisation={this.state.organisation}
-          onClose={this.onCloseOrganisationView}
-          show={this.state.showOrganisation}
-          notify={this.props.notify}
-        />
-        <div className={classes.organisationList}>
-          <Typography variant="h5" className={classes.title}>Organisasjoner</Typography>
-          <Divider/>
-          <List>
-            {organisations.map((organisation) =>
-              <ListItem className={classes.listItem} key={organisation.dn}>
-                <ListItemAvatar>
-                  <Avatar className={classes.itemAvatar}>
-                    <BusinessIcon/>
-                  </Avatar>
-                </ListItemAvatar>
-                <ListItemText
-                  primary={organisation.displayName}
-                  secondary={`${organisation.primaryAssetId !== null ? organisation.primaryAssetId : 'Ikke tilgjengelig'}`}
-                />
-                <ListItemSecondaryAction>
-                  <IconButton aria-label="Contacts"
-                              onClick={() => this.showContacts(organisation)}>
-                    <PersonIcon/>
-                  </IconButton>
-                  <IconButton aria-label="Remove"
-                              onClick={() => this.askToRemoveOrganisation(organisation)}>
-                    <RemoveIcon className={classes.removeIcon}/>
-                  </IconButton>
-                  <IconButton aria-label="Legal"
-                              onClick={() => this.showAddLegalContactDialog(organisation)}>
-                    <AccountBalanceIcon className={classes.setLegalIcon}/>
-                  </IconButton>
-                  <IconButton aria-label="Settings"
-                              onClick={() => this.showOrganisationView(organisation)}>
-                    <SettingsIcon/>
-                  </IconButton>
-                </ListItemSecondaryAction>
-              </ListItem>,
-            )}
-          </List>
+        <div className={classes.root}>
+          <WarningMessageBox
+            show={this.state.askToRemoveOrganisation}
+            message={this.state.message}
+            onClose={this.onCloseRemoveOrganisation}
+          />
+          <OrganisationAddLegalContact
+            notify={this.props.notify}
+            fetchContacts={this.props.fetchContacts}
+            contacts={this.props.contacts}
+            onClose={this.onCloseAddLegalContact}
+            currentLegalContact={this.state.currentLegalContact}
+            refreshLegalContact={this.refreshLegalContact}
+            organisation={this.state.organisation}
+            show={this.state.showAddLegalContactDialog}
+          />
+          <OrganisationView
+            organisation={this.state.organisation}
+            onClose={this.onCloseOrganisationView}
+            show={this.state.showOrganisation}
+            notify={this.props.notify}
+          />
+          <div className={classes.organisationList}>
+            <Typography variant="h5" className={classes.title}>Organisasjoner</Typography>
+            <Divider/>
+            <List>
+              {organisations.map((organisation) =>
+                <ListItem className={classes.listItem} key={organisation.dn}>
+                  <ListItemAvatar>
+                    <Avatar className={classes.itemAvatar}>
+                      <BusinessIcon/>
+                    </Avatar>
+                  </ListItemAvatar>
+                  <ListItemText
+                    primary={organisation.displayName}
+                    secondary={`${organisation.primaryAssetId !== null ? organisation.primaryAssetId : 'Ikke tilgjengelig'}`}
+                  />
+                  <ListItemSecondaryAction>
+                    <IconButton
+                      aria-label="Contacts"
+                      onClick={() => this.showContacts(organisation)}
+                      size="large">
+                      <PersonIcon/>
+                    </IconButton>
+                    <IconButton
+                      aria-label="Remove"
+                      onClick={() => this.askToRemoveOrganisation(organisation)}
+                      size="large">
+                      <RemoveIcon className={classes.removeIcon}/>
+                    </IconButton>
+                    <IconButton
+                      aria-label="Legal"
+                      onClick={() => this.showAddLegalContactDialog(organisation)}
+                      size="large">
+                      <AccountBalanceIcon className={classes.setLegalIcon}/>
+                    </IconButton>
+                    <IconButton
+                      aria-label="Settings"
+                      onClick={() => this.showOrganisationView(organisation)}
+                      size="large">
+                      <SettingsIcon/>
+                    </IconButton>
+                  </ListItemSecondaryAction>
+                </ListItem>,
+              )}
+            </List>
+          </div>
         </div>
-      </div>
-    );
+      );
   }
 }
 

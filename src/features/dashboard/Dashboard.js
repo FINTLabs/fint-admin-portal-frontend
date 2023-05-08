@@ -1,11 +1,12 @@
 import React, {Component} from "react";
-import {Avatar, Card, CardContent, CardHeader, Divider, Grid, Typography, withStyles} from "@material-ui/core";
-import {green} from "@material-ui/core/colors";
+import { Avatar, Card, CardContent, CardHeader, Divider, Grid, Typography } from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import {green} from "@mui/material/colors";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
-import BusinessIcon from "@material-ui/icons/Business";
-import ApiIcon from "@material-ui/icons/WebAsset";
-import ContactIcon from "@material-ui/icons/Person";
+import BusinessIcon from "@mui/icons-material/Business";
+import ApiIcon from "@mui/icons-material/WebAsset";
+import ContactIcon from "@mui/icons-material/Person";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import {fetchComponents} from "../../data/redux/dispatchers/component";

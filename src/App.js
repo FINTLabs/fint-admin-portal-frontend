@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import {createMuiTheme, MuiThemeProvider} from "@material-ui/core/styles";
+import { createTheme, ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import Main from "./main/Main";
 import AppProvider from "./data/context/AppProvider";
 import {CookiesProvider} from "react-cookie";
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         secondary: {
             light: '#7fb434',
@@ -29,13 +29,15 @@ const theme = createMuiTheme({
 class App extends Component {
     render() {
         return (
-            <MuiThemeProvider theme={theme}>
-                <CookiesProvider>
-                    <AppProvider>
-                        <Main/>
-                    </AppProvider>
-                </CookiesProvider>
-            </MuiThemeProvider>
+            <StyledEngineProvider injectFirst>
+                <ThemeProvider theme={theme}>
+                    <CookiesProvider>
+                        <AppProvider>
+                            <Main/>
+                        </AppProvider>
+                    </CookiesProvider>
+                </ThemeProvider>
+            </StyledEngineProvider>
         );
     }
 }

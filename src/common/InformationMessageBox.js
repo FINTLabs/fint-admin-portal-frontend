@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,} from "@material-ui/core";
+import Button from "@mui/material/Button";
+import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,} from "@mui/material";
 import PropTypes from "prop-types";
-import InformationIcon from "@material-ui/icons/Info";
-import {withStyles} from "@material-ui/core";
+import InformationIcon from "@mui/icons-material/Info";
+import withStyles from '@mui/styles/withStyles';
 
 
 const styles = (theme) => ({

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { PropTypes } from "prop-types";
-import ToTopIcon from "@material-ui/icons/ArrowUpward";
-import { withStyles } from "@material-ui/styles";
-import Fab from "@material-ui/core/Fab";
+import ToTopIcon from "@mui/icons-material/ArrowUpward";
+import { withStyles } from "@mui/styles";
+import Fab from "@mui/material/Fab";
 
 const styles = theme => ({
   toTop: {

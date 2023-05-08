@@ -1,18 +1,19 @@
 import React, {useEffect, useState} from "react";
-import {createStyles} from "@material-ui/core/styles";
+import createStyles from '@mui/styles/createStyles';
 import classNames from "classnames";
-import Drawer from "@material-ui/core/Drawer";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import Drawer from "@mui/material/Drawer";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuItems from "./MenuItems";
 import Routes from "../routes/Routes";
-import {Box, makeStyles, useTheme} from "@material-ui/core";
+import { Box, useTheme } from "@mui/material";
+import makeStyles from '@mui/styles/makeStyles';
 import {useDispatch} from "react-redux";
 import MeApi from "../../data/api/MeApi";
 import FintLogo from "../../images/fint-by-vigo-white.svg";
@@ -133,7 +134,7 @@ const AppMenu = () => {
                         aria-label="open drawer"
                         onClick={handleDrawerOpen}
                         className={classNames(classes.menuButton, open && classes.hide)}
-                    >
+                        size="large">
                         <MenuIcon/>
                     </IconButton>
                     <img src={FintLogo} alt="logo" className={classes.logo}
@@ -155,7 +156,7 @@ const AppMenu = () => {
                 open={open}
             >
                 <div className={classes.toolbar}>
-                    <IconButton onClick={handleDrawerClose}>
+                    <IconButton onClick={handleDrawerClose} size="large">
                         {theme.direction === 'rtl' ? <ChevronRightIcon/> : <ChevronLeftIcon/>}
                     </IconButton>
                 </div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, withStyles, Fab } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Fab } from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import AddIcon from "@mui/icons-material/Add";
 import PropTypes from "prop-types";
 import OrganisationApi from "../../../data/api/OrganisationApi";
 import DomainNameValidationInput from "../../../common/DomainNameValidationInput";

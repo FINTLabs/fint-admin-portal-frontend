@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import {
-    Avatar, Divider, IconButton, List, ListItem, ListItemAvatar, ListItemSecondaryAction, ListItemText, Typography,
-    withStyles
-} from "@material-ui/core";
-import RemoveIcon from "@material-ui/icons/RemoveCircle";
-import SettingsIcon from "@material-ui/icons/Settings";
-import ContactIcon from "@material-ui/icons/Person";
+    Avatar,
+    Divider,
+    IconButton,
+    List,
+    ListItem,
+    ListItemAvatar,
+    ListItemSecondaryAction,
+    ListItemText,
+    Typography,
+} from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
+import RemoveIcon from "@mui/icons-material/RemoveCircle";
+import SettingsIcon from "@mui/icons-material/Settings";
+import ContactIcon from "@mui/icons-material/Person";
 import WarningMessageBox from "../../common/WarningMessageBox";
 import ContactApi from "../../data/api/ContactApi";
 import ContactView from "./view/ContactView";
@@ -119,10 +127,16 @@ class ContactList extends React.Component {
                                     secondary={contact.lastName}
                                 />
                                 <ListItemSecondaryAction>
-                                    <IconButton aria-label="Remove" onClick={() => this.askToRemoveContact(contact)}>
+                                    <IconButton
+                                        aria-label="Remove"
+                                        onClick={() => this.askToRemoveContact(contact)}
+                                        size="large">
                                         <RemoveIcon/>
                                     </IconButton>
-                                    <IconButton aria-label="Settings" onClick={() => this.showContactView(contact)}>
+                                    <IconButton
+                                        aria-label="Settings"
+                                        onClick={() => this.showContactView(contact)}
+                                        size="large">
                                         <SettingsIcon/>
                                     </IconButton>
                                 </ListItemSecondaryAction>

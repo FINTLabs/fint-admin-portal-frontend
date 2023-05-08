@@ -1,10 +1,10 @@
 import React from 'react';
-import TableCell from "@material-ui/core/TableCell";
-import {TableRow} from "@material-ui/core";
-import ModifyIcon from "@material-ui/icons/Edit";
-import BulkIcon from "@material-ui/icons/FormatListBulleted";
-import SingleIcon from "@material-ui/icons/LooksOne";
-import Tooltip from "@material-ui/core/Tooltip";
+import TableCell from "@mui/material/TableCell";
+import {TableRow} from "@mui/material";
+import ModifyIcon from "@mui/icons-material/Edit";
+import BulkIcon from "@mui/icons-material/FormatListBulleted";
+import SingleIcon from "@mui/icons-material/LooksOne";
+import Tooltip from "@mui/material/Tooltip";
 
 const TableHeader = (props) => {
     const {classes, selectedAccessPackage} = props;

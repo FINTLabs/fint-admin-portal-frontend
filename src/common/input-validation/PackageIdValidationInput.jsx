@@ -1,8 +1,9 @@
 import React from "react";
-import {FormControl, FormHelperText, Input, InputLabel, withStyles} from "@material-ui/core";
+import { FormControl, FormHelperText, Input, InputLabel } from "@mui/material";
+import withStyles from '@mui/styles/withStyles';
 import PropTypes from "prop-types";
-import Grid from "@material-ui/core/Grid/Grid";
-import Typography from "@material-ui/core/Typography/Typography";
+import Grid from "@mui/material/Grid/Grid";
+import Typography from "@mui/material/Typography/Typography";
 
 const styles = theme => ({
     realm: {

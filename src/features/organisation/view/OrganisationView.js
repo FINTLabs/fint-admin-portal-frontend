@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField} from "@material-ui/core";
+import {Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField} from "@mui/material";
 import OrganisationApi from "../../../data/api/OrganisationApi";
 import PropTypes from "prop-types";
 

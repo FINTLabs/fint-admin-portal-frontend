@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import JSONPretty from 'react-json-pretty';
 import "react-json-pretty/themes/adventure_time.css";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from "@mui/styles";
 import _ from "lodash";
 
 const styles = theme => ({

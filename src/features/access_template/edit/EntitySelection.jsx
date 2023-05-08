@@ -1,9 +1,9 @@
 import React from 'react';
-import {Box, TableBody} from "@material-ui/core";
-import {makeStyles} from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Table from "@material-ui/core/Table";
-import TableHead from "@material-ui/core/TableHead";
+import {Box, TableBody} from "@mui/material";
+import makeStyles from '@mui/styles/makeStyles';
+import Typography from "@mui/material/Typography";
+import Table from "@mui/material/Table";
+import TableHead from "@mui/material/TableHead";
 import {useDispatch, useSelector} from "react-redux";
 import SelectAllEntitiesCheckboxes from "./SelectAllEntitiesCheckboxes";
 import EntityTable from "./EntityTable";

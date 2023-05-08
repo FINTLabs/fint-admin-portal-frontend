@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import { Button, Grid } from "@material-ui/core";
-import { withStyles } from "@material-ui/styles";
-import Divider from "@material-ui/core/Divider";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import { Button, Grid } from "@mui/material";
+import { withStyles } from "@mui/styles";
+import Divider from "@mui/material/Divider";
 import MaintanceApi from "../../../data/api/MaintanceApi";
 import ConsistencyReportView from "./ConsistencyReportView";
 import ConsistencyReportNavigation from "./ConsistencyReportNavigation";
@@ -129,7 +129,7 @@ class DataStoreConsistency extends Component {
     return (
       <div>
         <ToTopButton />
-        <Grid container direction="row" justify="center">
+        <Grid container direction="row" justifyContent="center">
           <Grid
             container
             direction="column"
@@ -137,7 +137,7 @@ class DataStoreConsistency extends Component {
             className={classes.root}
           >
             <Grid item>
-              <Grid container direction="row" justify="space-between">
+              <Grid container direction="row" justifyContent="space-between">
                 <FormControlLabel
                   control={
                     <Checkbox
@@ -200,7 +200,7 @@ class DataStoreConsistency extends Component {
                 />
               </Grid>
               <Grid item>
-                <Grid container justify="flex-end">
+                <Grid container justifyContent="flex-end">
                   <Button
                     color="primary"
                     variant="contained"
@@ -214,7 +214,7 @@ class DataStoreConsistency extends Component {
             </Grid>
             <Divider variant="fullWidth" />
             <Grid item>
-              <Grid container justify="center">
+              <Grid container justifyContent="center">
                 <ConsistencyReportNavigation
                   doOrganisation={this.state.checkedOrganisation}
                   doTechnical={this.state.checkedTechical}
@@ -231,7 +231,7 @@ class DataStoreConsistency extends Component {
 
               {this.isSelected() && <Divider variant="fullWidth" />}
 
-              <Grid container justify="center">
+              <Grid container justifyContent="center">
                 <ConsistencyReportView
                   data={this.state.organisationConsistency}
                   model={Model.ORG}
