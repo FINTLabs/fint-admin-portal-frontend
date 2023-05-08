@@ -64,7 +64,8 @@ class OrganisationList extends React.Component {
       showOrganisation: false,
       organisation: {},
       currentLegalContact: {},
-      message: ''
+      message: '',
+      showContacts: false,
     };
   }
 
@@ -108,10 +109,17 @@ class OrganisationList extends React.Component {
   };
 
   showContacts = (organisation) => {
+    console.log("jennifer-org", organisation);
     this.setState({
       showContacts: true,
       organisation: organisation,
       contacts: this.props.fetchContacts(),
+    });
+  };
+
+  onCloseContacts = () => {
+    this.setState({
+      showContacts: false,
     });
   };
 
@@ -179,6 +187,13 @@ getPrimaryAssetId = (organisation) => {
             refreshLegalContact={this.refreshLegalContact}
             organisation={this.state.organisation}
             show={this.state.showAddLegalContactDialog}
+          />
+          <OrganisationContacts
+              notify={this.props.notify}
+              contacts={this.props.contacts}
+              organisation={this.state.organisation}
+              show={this.state.showContacts}
+              onClose={this.onCloseContacts}
           />
           <OrganisationView
             organisation={this.state.organisation}
