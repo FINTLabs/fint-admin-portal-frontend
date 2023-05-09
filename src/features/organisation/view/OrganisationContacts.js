@@ -64,7 +64,6 @@ class OrganisationContacts extends Component {
   }
 
   handleCancel = () => {
-    console.log("jennifer", this.state.organisation)
     this.props.onClose();
   };
 

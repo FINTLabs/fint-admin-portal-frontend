@@ -109,7 +109,6 @@ class OrganisationList extends React.Component {
   };
 
   showContacts = (organisation) => {
-    console.log("jennifer-org", organisation);
     this.setState({
       showContacts: true,
       organisation: organisation,
