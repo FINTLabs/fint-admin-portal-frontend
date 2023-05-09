@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:12-alpine
 COPY . /src
 WORKDIR /src
 RUN yarn && yarn build 
