@@ -2,7 +2,7 @@ name: publish image to ACR
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   REGISTRY_NAME: fintlabsacr
